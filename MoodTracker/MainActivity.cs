@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using Android.Content;
 
 namespace MoodTracker
 {
@@ -19,7 +20,8 @@ namespace MoodTracker
         private void Button_Click(object sender, System.EventArgs e)
         {
             Button btn_Login = FindViewById<Button>(Resource.Id.btn_Login);
-            btn_Login.Text = "koffer";
+            var intent = new Intent(this, typeof(Registration));
+            StartActivity(intent);
         }
         private void Registration_Click(object sender, System.EventArgs e)
         {
