@@ -64,7 +64,7 @@ namespace MoodTracker
 		{
 			
 			// aapt resource value: 0x7f050005
-			public const int button1 = 2131034117;
+			public const int btn_Login = 2131034117;
 			
 			// aapt resource value: 0x7f050002
 			public const int et_Email = 2131034114;
