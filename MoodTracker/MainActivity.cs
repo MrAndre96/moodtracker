@@ -16,13 +16,26 @@ namespace MoodTracker
             SetContentView(Resource.Layout.Main);
             Button btn_Login = FindViewById<Button>(Resource.Id.btn_Login);
             btn_Login.Click += Button_Click;
+
+            TextView register = FindViewById<TextView>(Resource.Id.tv_Register);
+            register.Click += Register_Click; 
         }
+
+        private void Register_Click(object sender, System.EventArgs e)
+        {
+            Button btn_Login = FindViewById<Button>(Resource.Id.btn_Login);
+            var intent = new Intent(this, typeof(Registration));
+            StartActivity(intent);
+        }
+
+
         private void Button_Click(object sender, System.EventArgs e)
         {
             Button btn_Login = FindViewById<Button>(Resource.Id.btn_Login);
             var intent = new Intent(this, typeof(Registration));
             StartActivity(intent);
         }
+
         private void Registration_Click(object sender, System.EventArgs e)
         {
             TextView but = FindViewById<Button>(Resource.Id.tv_Register);
